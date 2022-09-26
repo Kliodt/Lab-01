@@ -1,21 +1,21 @@
 //Лабораторная №1 Вариант 13490
 public class Array {
     public static void main(String[] args) {
-        //создание и заполнение первого массива
+        //Создание и заполнение первого массива
         final int A_SIZE = 13, A_MAX = 17;
         int[] a = new int[A_SIZE];
         for (int i = 0; i < A_SIZE; i++) {
             a[i] = A_MAX - i;
         }
 
-        //создание и заполнение второго массива
+        //Создание и заполнение второго массива
         final int X_SIZE = 10;
         float[] x = new float[X_SIZE];
         for (int i = 0; i < X_SIZE; i++) {
             x[i] = (float) Math.random() * 16 - 4;
         }
 
-        //создание и заполнение третьего массива
+        //Создание и заполнение третьего массива
         double[][] array = new double[A_SIZE][X_SIZE];
         for (int i = 0; i < A_SIZE; i++) {
             for (int j = 0; j < X_SIZE; j++) {
@@ -34,7 +34,7 @@ public class Array {
             }
         }
 
-        //вывод результата
+        //Вывод результата
         for (int i = 0; i < A_SIZE; i++) {
             for (int j = 0; j < X_SIZE; j++) {
                 System.out.printf("%.4f  ", array[i][j]);
