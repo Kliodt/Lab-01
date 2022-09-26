@@ -8,7 +8,7 @@ public class Array {
             a[i] = A_MAX - i;
         }
 
-        //Создание и заполнение второго массива
+        //Создание и заполнение второго массива2
         final int X_SIZE = 10;
         float[] x = new float[X_SIZE];
         for (int i = 0; i < X_SIZE; i++) {
