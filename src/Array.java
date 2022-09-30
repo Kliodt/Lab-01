@@ -1,12 +1,26 @@
 //Лабораторная №1 Вариант 13490
 public class Array {
+    private static int[] array1(int aSize, int aMax){
+        int[] a = new int[aSize];
+        for (int i = 0; i < aSize; i++) {
+            a[i] = aMax - i;
+        }
+        return a;
+    }
+
+    public static void printArray(int aSize, int xSize, double[][] array){
+        for (int i = 0; i < aSize; i++) {
+            for (int j = 0; j < xSize; j++) {
+                System.out.printf("%13.4f\t", array[i][j]);
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         //Создание и заполнение первого массива
         final int A_SIZE = 13, A_MAX = 17;
-        int[] a = new int[A_SIZE];
-        for (int i = 0; i < A_SIZE; i++) {
-            a[i] = A_MAX - i;
-        }
+        int[] a = array1(A_SIZE, A_MAX);
+
 
         //Создание и заполнение второго массива
         final int X_SIZE = 10;
@@ -35,11 +49,9 @@ public class Array {
         }
 
         //Вывод результата
-        for (int i = 0; i < A_SIZE; i++) {
-            for (int j = 0; j < X_SIZE; j++) {
-                System.out.printf("%.4f  ", array[i][j]);
-            }
-            System.out.println();
-        }
+        printArray(A_SIZE, X_SIZE, array);
+
+
     }
 }
+
